@@ -72,7 +72,7 @@ EOF
   cat > /etc/nixos/hardware-configuration.nix << EOF
 { modulesPath, ... }:
 {
-  imports = [ (modulesPath + "/profiles/qemu-guest.nix") ];
+  imports = [ (modulesPath + "/profiles/all-hardware.nix") ];
 $bootcfg
   boot.initrd.availableKernelModules = [ ${availableKernelModules[@]} ];
   boot.initrd.kernelModules = [ "nvme" ];
